@@ -1,12 +1,18 @@
 picoCTF Forensic Challenge (Easy) — Writeup
+
 medium write-up : "https://medium.com/@abrar.fathoni/picoctf-forensic-challenge-easy-1842dbdda0ba?postPublishedType=initial"
+
 Deskripsi Singkat
-Pada challenge ini, diberikan sebuah file PDF bernama confidential.pdf. Tujuan utamanya adalah menemukan flag yang tersembunyi di dalam file tersebut menggunakan teknik digital forensics sederhana.
+Pada challenge ini, diberikan sebuah file PDF bernama confidential.pdf. 
+Tujuan utamanya adalah menemukan flag yang tersembunyi di dalam file tersebut menggunakan teknik digital forensics sederhana.
 Challenge ini menguji pemahaman dasar tentang metadata file dan encoding, khususnya penggunaan Base64.
 
 Tools yang Digunakan : 
-ExifTool
-Base64 Decoder (CLI Linux / WSL)
+
+- ExifTool
+
+- Base64 Decoder (CLI Linux / WSL)
+
 
 Langkah Penyelesaian
 1. Analisis File Awal
@@ -17,6 +23,7 @@ Dari hasil output, ditemukan field metadata pada bagian Author yang berisi strin
 
 2. Identifikasi Encoding
 String yang ditemukan memiliki karakteristik Base64:
+
 - Kombinasi huruf besar dan kecil
 - Angka
 - Kadang diakhiri dengan tanda =
